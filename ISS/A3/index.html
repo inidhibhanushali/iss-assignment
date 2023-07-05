@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Form</title>
+    <!-- Header Defined -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>HTML Input Form</h2>
+    <div class="form-container">
+        <!-- Form using HTML -->
+        <form name="myForm" action="submit.php" method="post" onsubmit="return validateForm()">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <!-- Name Field -->
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <!-- Email field -->
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <!-- Age field -->
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="18" max="100" required>
+            <!-- Gender Radio  -->
+            <div class="gender-radio">
+                <label for="gender">Gender</label>
+                <div class="radio-container">
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                </div>
+            </div>
+            <!-- Drop Down -->
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="USA">USA</option>
+                <option value="India">India</option>
+                <option value="UK">UK</option>
+                <option value="Australia">Australia</option>
+                <option value="China">China</option>
+            </select>
+            <!-- Message Field -->
+            <label for="message">Message - </label>
+            <textarea id="message" name="message" rows="4" cols="30"></textarea>
+            <!-- CheckBox -->
+            <input type="checkbox" id="subscribe" name="subscribe" checked>
+            <label for="subscribe">Subscribe to Our Newsletter</label>
+            <!-- Buttons -->
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
